@@ -1,0 +1,64 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Navbar component -->
+{% include 'components/navbar.html' %}
+
+<section id="about" class="about-section">
+    <h2>Chi Sono</h2>
+    <p>
+        Ciao, sono Luigi Balestrucci, un Junior Full-Stack Web Developer con una passione per la creazione di soluzioni visive e
+        digitali uniche. Con 2 di esperienza, mi impegno a trasformare
+        idee in realtà.
+    </p>
+</section>
+
+<section id="portfolio" class="portfolio-section">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+        <a href="{% url 'appointments_page' %}">
+            <div class="gallery-item">
+                    <p>Sezione Appuntamenti</p>
+                    <div class="container-img">
+                        <img src="{% static 'img/anteprima-appuntamenti.png' %}">
+                    </div>
+            </div>
+        </a>
+        <div class="gallery-item">Progetto 2</div>
+        <div class="gallery-item">Progetto 3</div>
+    </div>
+</section>
+
+<section id="services" class="services-section">
+    <h2>Servizi</h2>
+    <div class="service-cards">
+        <div class="card">
+            <h3>Design Grafico</h3>
+            <p>Creazione di loghi, brochure e materiale promozionale.</p>
+        </div>
+        <div class="card">
+            <h3>Sviluppo Web</h3>
+            <p>Siti web responsive e moderni.</p>
+        </div>
+        <div class="card">
+            <h3>Fotografia</h3>
+            <p>Servizi fotografici professionali.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <h2>Contatti</h2>
+    <form>
+        <input type="text" placeholder="Nome" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Messaggio" required></textarea>
+        <button type="submit">Invia</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2023 Il Mio Portfolio. Tutti i diritti riservati.</p>
+</footer>
+{% endblock %}

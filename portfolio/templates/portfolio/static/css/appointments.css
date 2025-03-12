@@ -1,0 +1,359 @@
+/* ! ROOT */
+:root {
+  --dark1: #0c042c;
+  --dark2: #0c214b;
+  --light1: #c3ccd4;
+
+  --neutral-gray: #b0b8c1;
+  --neutral-bg-color: rgba(176, 184, 193, 0.2);
+  --neutral-bg-color-contrast: rgba(124, 81, 149, 0.2);
+
+  --contrast-color: #3a255d;
+  --contrast-color-shadow: #3b255d2c;
+  --contrast-color2: #6a2dcc;
+  --positive-color: #2ac670;
+
+  --tittle1: whitesmoke;
+  --tittle2: #2ac4dd;
+
+  --circle-color-shadow: rgba(42, 196, 221, 0.15);
+  --circle-color-shadow-two: rgba(42, 196, 221, 0.05);
+  --card-color: #f8f4fc;
+
+  /* Range color */
+  --negative-color-left: #8b1e3f;
+  --negative-color-right: #c74b5b;
+  --positive-color: #2ac670;
+  --neutral-range-color: #d4a33e;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Intro", sans-serif;
+  line-height: 1.6;
+  color: var(--dark1);
+  background: linear-gradient(
+    to right,
+    var(--dark2),
+    var(--contrast-color),
+    var(--dark2)
+  );
+}
+
+header {
+  background: linear-gradient(rgba(12, 4, 44, 0.9), rgba(12, 33, 75, 0.9)),
+    url("hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--tittle1);
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--dark1);
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--tittle1);
+}
+
+.logo a {
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-bottom: 0;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--tittle1);
+  text-decoration: none !important;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--tittle2);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--tittle1);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--neutral-gray);
+}
+
+.cta-button {
+  background: var(--contrast-color2);
+  color: var(--tittle1);
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--contrast-color);
+}
+
+/* Personalizzazione della scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Larghezza della scrollbar */
+}
+
+/* Track (la parte "inattiva" della scrollbar) */
+::-webkit-scrollbar-track {
+  background: var(--neutral-bg-color); /* Colore di sfondo */
+  border-radius: 10px; /* Bordi arrotondati */
+}
+
+/* Handle (la parte "attiva" della scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: var(--contrast-color); /* Colore principale */
+  border-radius: 10px; /* Bordi arrotondati */
+  border: 3px solid var(--neutral-bg-color); /* Bordo per un effetto "incassato" */
+}
+
+/* Handle al passaggio del mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--contrast-color2); /* Cambia colore al hover */
+}
+
+.container {
+  max-width: 800px !important;
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+}
+
+.card-appointments {
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px var(--contrast-color-shadow);
+}
+
+.btn-primary {
+  background-color: var(--contrast-color2) !important;
+  border: none !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--contrast-color) !important;
+}
+
+/* APPUNTAMENTI CARD */
+.cardAppuntamenti {
+  background-color: var(--card-color);
+  width: 98%;
+  margin: 20px auto 0px auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cardAppuntamenti h3 {
+  color: var(--contrast-color);
+}
+
+.cardAppuntamenti .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+/* ! TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+thead th {
+  background-color: var(--contrast-color);
+  color: #fff;
+}
+
+tbody tr {
+  border: 1px solid #ddd;
+  background-color: white;
+}
+
+tbody tr:hover {
+  background-color: var(--contrast-color-shadow);
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.badge.general {
+  background-color: var(--neutral-range-color);
+}
+
+.badge.consulting {
+  background-color: var(--contrast-color-shadow);
+  color: var(--dark2);
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 4px;
+}
+
+.action-btn.approve {
+  color: var(--contrast-color2);
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.action-btn.approve:hover {
+  background-color: var(--contrast-color2);
+  color: var(--tittle1);
+}
+
+.action-btn.delete {
+  color: var(--negative-color-right);
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.action-btn.delete:hover {
+  background-color: var(--negative-color-right);
+  color: var(--tittle1);
+}
+
+/* ! BUTTON STYLE GENERAL */
+/* From Uiverse.io by Creatlydev */
+.button {
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--contrast-color2);
+  color: #fff;
+  border-radius: 18px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s;
+}
+
+.button__icon-wrapper {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: var(--contrast-color2);
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.button:hover {
+  background-color: var(--dark1);
+}
+
+.button:hover .button__icon-wrapper {
+  color: var(--dark1);
+}
+
+.button__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.button__icon-svg:first-child {
+  position: absolute;
+  transform: translate(0);
+}
+
+.button:hover .button__icon-svg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.button:hover .button__icon-svg--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+}
+
+footer {
+  background: var(--dark1);
+  color: var(--tittle1);
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,0 +1,115 @@
+/* Importa il font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+/* ROOT VARIABLES */
+:root {
+  --dark1: #0c042c;
+  --dark2: #0c214b;
+  --light1: #c3ccd4;
+  --neutral-gray: #b0b8c1;
+  --neutral-bg-color: rgba(176, 184, 193, 0.2);
+  --neutral-bg-color-contrast: rgba(124, 81, 149, 0.2);
+  --contrast-color: #3a255d;
+  --contrast-color-shadow: #3b255d2c;
+  --contrast-color2: #6a2dcc;
+  --positive-color: #2ac670;
+  --tittle1: whitesmoke;
+  --tittle2: #2ac4dd;
+  --circle-color-shadow: rgba(42, 196, 221, 0.15);
+  --circle-color-shadow-two: rgba(42, 196, 221, 0.05);
+  --card-color: #f8f4fc;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* BODY */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--dark1), var(--dark2));
+  color: var(--tittle1);
+  overflow: hidden;
+}
+
+/* LOGIN CONTAINER */
+.login-container {
+  background: var(--card-color);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--contrast-color-shadow);
+  width: 350px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* TITLE */
+.login-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--contrast-color);
+}
+
+/* INPUTS */
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid var(--neutral-gray);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: 0.3s;
+  background: var(--light1);
+  color: var(--dark1);
+}
+
+.login-container input:focus {
+  border-color: var(--contrast-color2);
+  outline: none;
+  box-shadow: 0 0 5px var(--contrast-color-shadow);
+}
+
+/* BUTTON */
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: var(--contrast-color2);
+  color: var(--tittle1);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background: var(--contrast-color);
+}
+
+/* MESSAGE BOX */
+.message-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: var(--neutral-bg-color-contrast);
+  border-left: 5px solid var(--contrast-color2);
+  border-radius: 5px;
+  color: var(--dark1);
+  font-size: 0.9rem;
+  display: none;
+}
+
+/* ANIMAZIONE DI ENTRATA */
+.login-container {
+  opacity: 0;
+  transform: translateY(-30px);
+}
