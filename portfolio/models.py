@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+# Create your models here.
+
+# Modello per l'appuntamento
 class Appointment(models.Model):
     nome_paziente = models.CharField(max_length=255)
     eta = models.IntegerField()
@@ -13,6 +16,3 @@ class Appointment(models.Model):
     
     def __str__(self):
         return f"{self.nome_paziente} - {self.orario}"
-
-
-# Create your models here.

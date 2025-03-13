@@ -77,6 +77,14 @@ body {
   box-shadow: 0 0 5px var(--contrast-color-shadow);
 }
 
+/* NEGATIVE MESSAGE BOX */
+.hidden-message{
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+
+
 /* BUTTON */
 .login-container button {
   width: 100%;
@@ -108,6 +116,17 @@ body {
   display: none;
 }
 
+/* ERROR MESSAGE */
+.error-message {
+  display: block;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  text-align: left;
+  opacity: 1;
+  transition: opacity 0
+}
 /* ANIMAZIONE DI ENTRATA */
 .login-container {
   opacity: 0;
